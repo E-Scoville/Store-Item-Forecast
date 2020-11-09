@@ -1,5 +1,5 @@
 rm(list=ls())
-setwd('C:/Users/Arathen/Desktop/Github Projects/Store-Item-Forecast/')
+setwd("C:/Users/Arathen/Desktop/Github Projects/Store-Item-Forecast/Eirik's Models")
 
 # Load libraries
 library(randomForest)
@@ -8,8 +8,8 @@ library(tidyverse)
 library(lubridate)
 
 # Read in data
-train <- read.csv("train.csv")
-test <- read.csv("test.csv")
+train <- read.csv("../train.csv")
+test <- read.csv("../test.csv")
 fulldata <- bind_rows(train, test)
 
 # Do some transformations
