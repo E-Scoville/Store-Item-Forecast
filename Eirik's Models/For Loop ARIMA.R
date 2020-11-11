@@ -53,5 +53,9 @@ for (s in 1:10) {
   }
 }
 
-dim(preds)
-head(preds)
+# Sort preds the way the submissions are supposed to be sorted
+preds <- preds %>% arrange(item, store, date)
+
+# Write final submission file
+preds_final <- data.frame(id = test$id, sales = round(preds$sales))
+write_csv(preds_final, "submission.csv")
